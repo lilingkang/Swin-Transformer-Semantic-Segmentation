@@ -8,10 +8,10 @@ model = dict(
         depths=[2, 2, 6, 2],
         num_heads=[3, 6, 12, 24],
         window_size=7,
-        ape=False,
+        use_abs_pos_embed=False,
         drop_path_rate=0.3,
-        patch_norm=True,
-        use_checkpoint=False
+        patch_norm=True
+        # use_checkpoint=False
     ),
     decode_head=dict(
         in_channels=[96, 192, 384, 768],
